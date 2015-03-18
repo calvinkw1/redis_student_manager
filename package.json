@@ -1,0 +1,19 @@
+{
+  "name": "redis_student_manager",
+  "version": "1.0.0",
+  "description": "For tonight's lab, we'd like you to build an app that uses node on the backend with redis for persistance.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calvinkw1/redis_student_manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calvinkw1/redis_student_manager/issues"
+  },
+  "homepage": "https://github.com/calvinkw1/redis_student_manager"
+}

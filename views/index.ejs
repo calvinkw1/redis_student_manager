@@ -20,7 +20,7 @@
 
 <% names.forEach(function(name) { %>
   <li>
-    <form action="/edit/<%= name %>" method="GET">
+    <form action="/students/<%= name %>/edit" method="GET">
       <input type="submit" value="Edit">
     <%= name %>
     </form>

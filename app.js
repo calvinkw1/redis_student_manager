@@ -20,7 +20,7 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/edit/:name", function(req, res) {
+app.get("/students/:name/edit", function(req, res) {
   client.lrange("students", 0, -1, function(err, names) {
     names.forEach(function(name) {
       if (name === req.params.name) {
@@ -37,9 +37,9 @@ app.post("/create", function(req, res) {
   res.redirect("/");
 });
 
-app.put("/edit/:name/:newName", function(req, res) {
+app.put("/students/:name", function(req, res) {
   origName = req.params.name;
-  newName = req.params.newName;
+  newName = req.body.newName;
   console.log(origName + ", " + newName);
   client.lrange("students", 0, -1, function(err, names) {    
     for (var i = 0; i < names.length; i++) {

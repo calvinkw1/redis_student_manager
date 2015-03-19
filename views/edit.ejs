@@ -5,9 +5,8 @@
   <title>Edit</title>
 </head>
 <body>
-  <form action="/edit/<%= name %>/newName?_method=PUT" method="POST">
+  <form action="/students/<%= name %>?_method=PUT" method="POST">
   <p>
-    <input type="hidden" id="<%= name %>" name="<%= name %>" value="<%= name %>">
     <label for="newName">Student Name: </label>
     <input type="text" id="newName" name="newName" value="<%= name %>"autofocus required>
   </p>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Manager</title>
+</head>
+<body>
+  <h1>Student Manager</h1>
+
+<form action="/create" method="POST">
+  <p>
+    <label for="name">Student Name: </label>
+    <input type="text" id="name" name="name" autofocus required>
+  </p>
+  <p>
+    <input type="submit" value="Submit">
+  </p>
+</form>
+
+
+<% names.forEach(function(name) { %>
+  <li>
+    <form action="/edit/<%= name %>" method="GET">
+      <input type="submit" value="Edit">
+    <%= name %>
+    </form>
+    <form action="/remove/<%= name %>?_method=DELETE" method="POST">
+      <input type="submit" value="Remove">
+    </form>
+  </li>
+<% }); %>
+
+<p>
+  <form action="/removeall?_method=DELETE" method="POST">
+    <input type="submit" value="Delete All">
+  </form>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
